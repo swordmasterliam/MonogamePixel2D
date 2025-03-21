@@ -9,10 +9,14 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoGamePixel2D.Assets.Graphics.Animations;
 
-public class AnimatedSprite : IDrawable, IUpdatable
+/// <summary>
+/// A drawable object that contains multiple frames and and frame sections for animations.
+/// </summary>
+public class AnimatedSprite : IComplexDrawable, IUpdatable
 {
     public const string DEFAULT_SECTION_NAME = "default";
 
+    /// <inheritdoc/>
     public Texture2D Texture { get; set; }
 
     /// <summary>
@@ -78,7 +82,7 @@ public class AnimatedSprite : IDrawable, IUpdatable
     private AnimationSection section;
     private readonly Dictionary<string, AnimationSection> sections;
 
-    public static AnimatedSprite LoadWithDTO(Texture2D texture, AnimatedSpriteDTO DTO)
+    internal static AnimatedSprite LoadWithDTO(Texture2D texture, AnimatedSpriteDTO DTO)
     {
         return new AnimatedSprite(texture, DTO.Frames, DTO.Sections);
     }

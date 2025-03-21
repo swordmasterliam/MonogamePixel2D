@@ -3,10 +3,11 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoGamePixel2D.Assets.Graphics;
 
-public class ImageSprite(Texture2D texture) : IDrawable
+public class ImageSprite(Texture2D texture) : IComplexDrawable
 {
     public Texture2D Texture { get; set; } = texture;
 
+    /// <inheritdoc/>
     public void Draw(SpriteBatch spriteBatch, Rectangle destinationRectangle, Color color)
     {
         spriteBatch.Draw(Texture, destinationRectangle, color);

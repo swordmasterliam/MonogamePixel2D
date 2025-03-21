@@ -17,7 +17,7 @@ public class AssetManager
 
 
 
-    private readonly Dictionary<string, IDrawable> sprites = [];
+    private readonly Dictionary<string, IComplexDrawable> sprites = [];
     private readonly Dictionary<string, AnimatedSprite> animations = [];
 
     public AssetManager(ContentManager content, string dataDir, string assetDir)
@@ -65,7 +65,7 @@ public class AssetManager
         }
     }
 
-    public IDrawable GetSprite(string name)
+    public IComplexDrawable GetSprite(string name)
     {
         try
         {

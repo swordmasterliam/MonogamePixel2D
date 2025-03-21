@@ -4,8 +4,14 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoGamePixel2D.Assets.Graphics;
 
-public interface IDrawable
+/// <summary>
+/// Interface for an object that contains a texture and draw functions with all the things that spritebatch could do
+/// </summary>
+public interface IComplexDrawable
 {
+    /// <summary>
+    /// The <c>Texture2D</c> that will be drawn when <c>Draw</c> is called.
+    /// </summary>
     public Texture2D Texture { get; set; }
 
     /// <summary>
