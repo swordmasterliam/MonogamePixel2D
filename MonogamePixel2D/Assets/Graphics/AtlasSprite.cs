@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoGamePixel2D.Assets.Graphics;
 
-public class AtlasSprite : IDrawable
+public class AtlasSprite : IComplexDrawable
 {
     public string fileName { get; set; }
     public int width { get; set; }
