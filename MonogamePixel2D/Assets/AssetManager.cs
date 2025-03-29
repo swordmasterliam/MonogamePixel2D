@@ -94,7 +94,7 @@ public class AssetManager
     }
     #endregion
 
-    }
+    
     private static bool IsValidAsset(string fileName)
     {
         var delimeterIndex = fileName.IndexOf(PrefixDelimiter);
